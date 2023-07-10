@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-    private static final String FILE_NAME = "src/resources/countries.csv";
+    private static final String FILE_NAME = "countries.csv";
 
     // nie zmieniaj nic w main
     public static void main(String[] args) {
@@ -26,6 +26,7 @@ public class Main {
             } else {
                 System.out.printf("Kod kraju %s nie został znaleziony", countryCode);
             }
+            scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Brak pliku countries.csv.");
         } catch (IOException e) {
